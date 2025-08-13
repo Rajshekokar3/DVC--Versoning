@@ -1,3 +1,13 @@
 # create a git repo and clone it in repo 
 2. Create code.py and add code to it (it will save a csv file to a new "data" folder)
 3. git commit push 
+4. dvc initiate
+4. NOW WE DO "dvc init"
+5. Now do mkdir s3 (create a new S3 direcotry)
+6. Now we do "dvc remote add -d myreote s3"   #my remote is s3 folder 
+7. now "dvc add data/" # dvc is respondible for versoning 
+    Now it will ask to do :("git rm -r --chache "data" and "git commit -m" stop tracking data "")
+    Beacuse initially we were tracking data /folder from git so now we remove it for DVC to handle
+
+8. Again we dp "dvc add data/" (create data.dvc) then "git add .gitignore data.dvc"
+9. Now - "dvc commit" and then "dvc push"
